@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import "./Homepage.css";
 
 const HomePage = () => {
     const navigate = useNavigate();
@@ -9,10 +10,13 @@ const HomePage = () => {
   
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
-      <h1>Welcome to the assignment review app</h1>
-      <button onClick={handleRedirect}>Login</button>
+    <>
+    <div >
+      <h1 className="Header">Welcome To the Assignment Review APP</h1>
     </div>
+    <div className="login-button"><button onClick={handleRedirect}>Login</button></div>
+    </>
+    
   );
 };
 
