@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import "./Login.css";
 
@@ -78,7 +79,7 @@ const Login = () => {
               required
               placeholder="Username"
             ></input>
-
+  
             <input
               type="password"
               id="password"
@@ -88,7 +89,11 @@ const Login = () => {
               placeholder="Password"
             ></input>
             <button onClick={handleSubmit}>LOGIN</button>
+  
+            {/* Reset Password Link */}
+            <Link to="/ForgotPassword">Reset Password</Link>
           </form>
+          <Link to="/RegisterForm">Register</Link>
         </section>
       )}
     </div>
